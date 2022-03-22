@@ -1,0 +1,45 @@
+{
+    "manifestVersion": 1,
+    "baseUri": "https://localhost:44300",
+    "id": "testYN",
+    "publisher": "YashrajNagpal",
+    "version": "1.0.6",
+    "name": "Test Extension",
+    "description": "A sample extension",
+    "public": false,
+    "categories": ["Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "contributions": [
+        {
+            "id": "sample-work-item-form-control",
+            "type": "ms.vss-work-web.work-item-form-control",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "My Control",
+                "icon": "images/extension-icon.png",
+                "uri": "my-hub.html",
+		        "height": 600
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "my-hub.html",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}
